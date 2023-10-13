@@ -1,13 +1,12 @@
-# Ruby
-
-A multi-column [Ghost](https://github.com/TryGhost/Ghost) theme with a unique card layout. Make your publication more organized with cards and widgets.
-
-**Demo: https://ruby.ghost.io**
+# CGPS Theme!
 
 # Instructions
 
-1. [Download this theme](https://github.com/TryGhost/Ruby/archive/main.zip)
-2. Log into Ghost, and go to the `Design` settings area to upload the zip file
+1. Navigate to the ghost directory
+2. Navigate to content/themes directory
+3. Clone this folder inside that directory
+4. Rename the folder if you wish
+5. Start developing!
 
 # Development
 
