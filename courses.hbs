@@ -1,0 +1,5 @@
+{{#get "posts" filter="tags:courses" limit="all" include="tags" order="title asc"}}
+    {{#foreach posts}}
+            {{post}}
+    {{/foreach}}
+{{/get}}
