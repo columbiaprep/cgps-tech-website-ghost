@@ -1,7 +1,7 @@
-{{#get "posts" limit="all" include="tags" order="title asc"}}
+{{!< default}}
+
+{{#get "posts" limit="all" filter="tags:[course]" include="tags" order="title asc"}}
     {{#foreach posts}}
-        {{#has tag="courses"}}
-            {{post}}
-        {{/has}}
+        {{> "loop"}}
     {{/foreach}}
 {{/get}}
