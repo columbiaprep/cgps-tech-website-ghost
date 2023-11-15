@@ -6,6 +6,15 @@
     margin-right: 5%;
 }
 
+h2.page-title {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 20px;
+    padding-left: 0;
+    letter-spacing: 0.3px;
+}
+
+
 @media (max-width: 1200px) {
     .courses {
         grid-template-columns: repeat(3, 1fr);
