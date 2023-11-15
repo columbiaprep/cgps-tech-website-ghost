@@ -1,7 +1,13 @@
 {{!< default}}
 
-{{#get "posts" limit="all" filter="tags:[course]" include="tags" order="title asc"}}
-    {{#foreach posts}}
-        {{> "loop"}}
-    {{/foreach}}
-{{/get}}
+<head>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/courses.css"}}">
+</head>
+
+<div class="courses">
+    {{#get "posts" limit="all" filter="tags:[course]" include="tags" order="title asc"}}
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    {{/get}}
+</div>
