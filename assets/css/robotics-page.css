@@ -1,0 +1,36 @@
+/* General */
+
+/* Fonts */
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+
+/* Layout */
+.club-header #robotics-logo {
+    height: 60px;
+}
+/* try to make this have same response as brand logo */
+div.club-header {
+    display: flex;
+    margin-left: 30px;
+    padding-bottom: 20px;
+}
+
+.robotics-posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    div.club-header {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+}
