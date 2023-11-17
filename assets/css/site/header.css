@@ -1,8 +1,7 @@
 .gh-head {
-    background-color: #2EBFFE;
+    background-color: transparent;
     opacity: 70%;
 }
-
 .gh-head-menu,
 .gh-head-actions {
     font-size: 1.2rem;
