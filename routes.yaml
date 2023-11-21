@@ -1,0 +1,13 @@
+routes:
+  /courses/:
+    template: courses
+  /robotics-club/:
+    template: robotics-club
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
