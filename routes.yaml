@@ -1,7 +1,11 @@
 routes:
   /courses/:
     template: courses
-  /robotics-club/:
+  /girls-who-code/:
+    template: girls-who-code
+  /cs-club/:
+    template: cs-club
+  /robotics/:
     template: robotics-club
 collections:
   /:
