@@ -46,10 +46,6 @@ div.page-head {
 }
 
 /* Specific to Tag */
-article {
-    border: 1px solid;
-    border-color: var(--robotics_black);
-}
 
 article > a > div > div, body > div.gh-site > div > main > div.robotics-posts > article > a > div > header > h2, body > div.gh-site > div > main > div.robotics-posts > article > a > footer > span {
     color: var(--robotics_black);
