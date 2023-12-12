@@ -1,0 +1,8 @@
+/* Robotics Tag */
+
+article.tag-robotics a div header span.post-tag {
+    background-color: #1118FC;
+    color: #EEF0F2;
+    border-radius: 10px;
+    padding: 2px 5px;
+}

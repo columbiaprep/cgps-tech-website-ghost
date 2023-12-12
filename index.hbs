@@ -4,7 +4,7 @@
 <main class="site-main gh-inner">
 
     <div class="post-feed gh-feed">
-        {{#get "posts" limit="all" filter="tags:-[course]" include="tags"}}
+        {{#get "posts" limit="all" filter="tags:-[course], -[robotics], -[girls-who-code], -[cs-club]" include="tags"}}
             {{#foreach posts}}
                 {{> "loop"}}
             {{/foreach}}
