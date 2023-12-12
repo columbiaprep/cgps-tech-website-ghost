@@ -1,0 +1,17 @@
+routes:
+  /courses/:
+    template: courses
+  /girls-who-code/:
+    template: girls-who-code
+  /cs-club/:
+    template: cs-club
+  /robotics/:
+    template: robotics-club
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

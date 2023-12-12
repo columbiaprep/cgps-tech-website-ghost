@@ -1,5 +1,14 @@
-{{#get "posts" filter="tags:courses" limit="all" include="tags" order="title asc"}}
-    {{#foreach posts}}
-            {{post}}
-    {{/foreach}}
-{{/get}}
+{{!< default}} 
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{asset "css/courses.css"}}">
+    </head>
+    <main>
+        <h2 class="page-title">2023-2024 Courses</h2>
+        <div class="courses">
+            {{#get "posts" limit="all" filter="tags:[course]" include="tags" order="title asc"}}
+                {{#foreach posts}}
+                    {{> "loop"}}
+                 {{/foreach}}
+            {{/get}}
+        </div>
+    </main>

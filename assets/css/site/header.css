@@ -1,7 +1,7 @@
 .gh-head {
     background-color: transparent;
+    opacity: 70%;
 }
-
 .gh-head-menu,
 .gh-head-actions {
     font-size: 1.2rem;
@@ -13,3 +13,4 @@
 .gh-head-btn {
     --multiplier: 1.3;
 }
+

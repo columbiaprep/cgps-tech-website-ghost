@@ -1,0 +1,17 @@
+{{!< default}}
+<head>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/robotics-page.css"}}">
+</head>
+<main>
+    <div class="gh-head-logo page-head club-header">
+        <img id="robotics-logo" src="{{asset "images/robotics-club-logo.png"}}" alt="Logo for CGPS Robotics Club">
+        <h2>Robotics Club</h2>
+    </div>
+    <div class="robotics-posts">
+            {{#get "posts" limit="all" filter="tags:[robotics]" include="tags" order="title asc"}}
+                {{#foreach posts}}
+                    {{> "loop"}}
+                 {{/foreach}}
+            {{/get}}
+        </div>
+</main>

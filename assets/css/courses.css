@@ -1,0 +1,34 @@
+.courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h2.page-title {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 20px;
+    padding-left: 0;
+    letter-spacing: 0.3px;
+}
+
+
+@media (max-width: 1200px) {
+    .courses {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
