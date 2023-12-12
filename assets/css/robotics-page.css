@@ -9,47 +9,80 @@
 /* General */
 
 /* Fonts */
-h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-}
-
 
 /* Layout */
-
-.club-header #robotics-logo {
-    height: 60px;
+@media (min-width: 600px) {
+    .robotics-posts {
+        margin-top: -30px;
+    }
 }
-/* Needs to be made with better responsive design that can go along with site header */
+
 div.page-head {
     display: flex;
     margin-left: 70px;
+    padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 10px;
 }
 
-.robotics-posts {
+#robotics-logo {
+    width: 40px;
+}
+
+#robotics-posts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-left: 5%;
     margin-right: 5%;
+    text-wrap: wrap;
 }
 
-@media (max-width: 1200px) {
-    .robotics-posts {
+.description {
+    width: 380px;
+    margin-left: 5%;
+    height: min-content + 20px;
+    padding-bottom: 40px;
+}
+
+/* Specific to Tag */
+article {
+    border: 1px solid;
+    border-color: var(--robotics_black);
+}
+
+article > a > div > div, body > div.gh-site > div > main > div.robotics-posts > article > a > div > header > h2, body > div.gh-site > div > main > div.robotics-posts > article > a > footer > span {
+    color: var(--robotics_black);
+}
+article > a > div > header > span {
+    color: var(--robotics_light_blue);
+}
+
+article > a > footer {
+    background-color: var(--robotics_white);
+    border-color: var(--robotics_white);
+}
+/* Responsive Design */
+
+@media only screen and (max-width: 1190px) {
+    #robotics-posts {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 992px) {
-    .robotics-posts {
+@media only screen and (max-width: 992px) {
+    #robotics-posts {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
-    .robotics-posts {
+@media only screen and (max-width: 768px) {
+    #robotics-posts {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .description {
+        width: 80%;
     }
 }
 
