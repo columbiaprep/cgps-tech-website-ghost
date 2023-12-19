@@ -7,3 +7,11 @@ span.tag-robotics-span.post-tag {
     padding: 2px 5px;
 }
 
+/* CS Club Tag */
+
+span.tag-cs-club-span {
+    background-color: #61aee9;
+    color: #EEF0F2;
+    border-radius: 10px;
+    padding: 2px 5px;
+}

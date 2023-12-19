@@ -1,4 +1,5 @@
 onload = () => {
+    // Robotics
     const roboticsArticles = document.querySelectorAll('.tag-robotics');
 
     roboticsArticles.forEach(article => {
@@ -8,6 +9,7 @@ onload = () => {
             span.classList.add('tag-robotics-span');
         });
     });
+    // CS Club
 
     const csClubArticles = document.querySelectorAll('.tag-cs-club');
 
@@ -18,6 +20,7 @@ onload = () => {
             span.classList.add('tag-cs-club-span');
         });
     });
+    // Girls Who Code
 
     const girlsWhoCodeArticles = document.querySelectorAll('.tag-girls-who-code');
 
