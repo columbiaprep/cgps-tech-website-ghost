@@ -17,17 +17,21 @@
     }
 }
 
-div.page-head {
+div#page-head {
+    display: block;
+}
+.description {
+    padding-top: 5px;
+}
+
+.flex {
     display: flex;
-    margin-left: 70px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
 }
 
 #robotics-logo {
     width: 40px;
 }
+
 
 #robotics-posts {
     display: grid;
@@ -35,15 +39,7 @@ div.page-head {
     gap: 32px;
     margin-left: 5%;
     margin-right: 5%;
-    text-wrap: wrap;
-}
-
-.description {
-    width: 380px;
-    margin-left: 5%;
-    height: min-content + 20px;
-    padding-bottom: 40px;
-    position: sticky;
+    text-wrap: pretty;
 }
 
 /* Specific to Tag */
@@ -77,17 +73,7 @@ article > a > footer {
     #robotics-posts {
         grid-template-columns: repeat(1, 1fr);
     }
+    
 
-    .description {
-        width: 80%;
-        padding: 0;
-        padding-bottom: 30px;
-    }
-
-    div.page-head {
-        margin-left: 30px;
-        display: flex;
-        padding-left: 0;
-    }
 
 }
