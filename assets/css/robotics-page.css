@@ -24,7 +24,7 @@ div#page-head {
     padding-top: 5px;
 }
 
-.flex {
+.title {
     display: flex;
 }
 
@@ -74,6 +74,13 @@ article > a > footer {
         grid-template-columns: repeat(1, 1fr);
     }
     
+    .title {
+        justify-content: center;
+        align-items: center;
+    }
 
-
+    .description {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
