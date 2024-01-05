@@ -30,10 +30,15 @@
 
     <div class="post-wrapper">
         <header class="post-header">
-            {{#primary_tag}}
+            <div class="post-top">
+                {{#primary_tag}}
                 <span class="post-tag">{{name}}</span>
-            {{/primary_tag}}
-
+                {{/primary_tag}}
+                <time class="post-date">
+                    {{updated_at}}
+                </time>
+            </div>
+            
             <h2 class="post-title">
                 {{title}}
             </h2>

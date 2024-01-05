@@ -14,8 +14,28 @@
                     <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
                 {{/if}}
                 —
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                <span id="current-post-date">{{updated_at}}</span>
             </span>
+
+            <script>
+                // Displays the date in different formats depending on the time passed since the post was published
+                var date = document.getElementById('current-post-date');
+                var dateText = date?.innerText;
+                var dateNow = new Date();
+                var datePost = dateText ? new Date(dateText) : new Date();
+                var diff = dateNow.getTime() - datePost.getTime(); 
+                var hours = Math.floor(diff / (1000 * 60 * 60));
+                var minutes = Math.floor(diff / (1000 * 60));
+                if (hours > 24) {
+                    date.innerHTML = "{{date updated_at format="MMM DD, YYYY"}}";
+
+                } else if (minutes > 60) {
+                    date.innerText = hours + ' hours ago';
+                } else {
+                    date.innerText = minutes + ' minutes ago';
+                }
+        
+            </script>
 
             <h1 class="gh-article-title">{{title}}</h1>
 

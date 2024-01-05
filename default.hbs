@@ -88,8 +88,47 @@
     {{> "pswp"}}
 {{/is}}
 
+<script>
+        // Get each post and create id for each date
+        var posts = document.querySelectorAll('.post-date');
+        for (var i = 0; i < posts.length; i++) {
+            posts[i].id = 'post-date-' + i;
+        }
+
+        // Displays the date in different formats depending on the time passed since the post was published
+        var date;
+        var dateText;
+        var dateNow;
+        var datePost;
+        var diff;
+        var hours;
+        var minutes;
+
+        for (var i = 0; i < posts.length; i++) {
+            console.log(i);
+            date = document.getElementById('post-date-' + i);
+            dateText = date?.innerText;
+            dateNow = new Date();
+            datePost = dateText ? new Date(dateText) : new Date();
+            diff = dateNow.getTime() - datePost.getTime();
+            hours = Math.floor(diff / (1000 * 60 * 60));
+            minutes = Math.floor(diff / (1000 * 60));
+            if (hours > 24) {
+                date.innerHTML = "{{date updated_at format="MMM DD, YYYY"}}";
+            } else if (minutes > 60) {
+                if (hours === 1) {
+                    date.innerText = hours + ' hr ago';
+                    continue;
+                }
+                date.innerText = hours + ' hrs ago';
+            } else {
+                date.innerText = minutes + ' mins ago';
+            }
+        }
+</script>
 <script src="{{asset "built/main.min.js"}}"></script>
 <script src="{{asset "js/post-tag-add.js"}}"></script>
+
 {{ghost_foot}}
 
 </body>
