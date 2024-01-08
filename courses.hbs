@@ -5,7 +5,7 @@
     <main>
         <h2 class="page-title">2023-2024 Courses</h2>
         <div class="courses">
-            {{#get "posts" limit="all" filter="tags:[course]" include="tags" order="title asc"}}
+            {{#get "posts" limit="all" filter="tags:[hash-course]" include="tags" order="title asc"}}
                 {{#foreach posts}}
                     {{> "loop"}}
                  {{/foreach}}
