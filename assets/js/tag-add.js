@@ -1,4 +1,14 @@
 onload = () => {
+    // Add gh-inner class to main
+    const coursePostTitles = document.querySelectorAll('.course-post-title');
+    coursePostTitles.forEach(title => {
+        title.classList.add('course-post-title-margin-top');
+    });
+    $('.course-post-title-margin-top').css('margin-top', postTopMarginIntPlusString);
+
+    // Add gh-inner class to main
+    const main = document.querySelector('main');
+    main.classList.add('gh-inner');
     // Robotics
     const roboticsArticles = document.querySelectorAll('.tag-robotics');
 
@@ -63,16 +73,4 @@ onload = () => {
             postTopMarginIntPlusString = "-" + postTopHeight.toString() + "px";
         });
     });
-
-
-    const coursePostTitles = document.querySelectorAll('.course-post-title');
-    coursePostTitles.forEach(title => {
-        title.classList.add('course-post-title-margin-top');
-    });
-    $('.course-post-title-margin-top').css('margin-top', postTopMarginIntPlusString);
-
-    // Add gh-inner class to main
-    const main = document.querySelector('main');
-    main.classList.add('gh-inner');
-
 };
