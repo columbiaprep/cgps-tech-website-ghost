@@ -3,8 +3,7 @@
 <main class="site-main">
 
     {{#post}}
-        {{#get "tags" filter="course" as |courseTag|}}
-            {{#if courseTag}}
+            {{#has tag="course"}}
                 {{> "course-post"}}
             {{else}}
                     <article class="gh-article {{post_class}}">
@@ -31,7 +30,9 @@
                                 var minutes = Math.floor(diff / (1000 * 60));
                                 if (hours > 24) {
                                     date.innerHTML = "{{date updated_at format="MMM DD, YYYY"}}";
+                                }
                             </script>
+                            <h1 class="gh-article-title">{{title}}</h1>
                         </header>
 
                         <div class="gh-content gh-canvas">
@@ -39,8 +40,7 @@
                         </div>
 
                     </article>
-            {{/if}}
-        {{/get}}
+            {{/has}}
     {{/post}}
 
 </main>
