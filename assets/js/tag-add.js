@@ -70,4 +70,9 @@ onload = () => {
         title.classList.add('course-post-title-margin-top');
     });
     $('.course-post-title-margin-top').css('margin-top', postTopMarginIntPlusString);
+
+    // Add gh-inner class to main
+    const main = document.querySelector('main');
+    main.classList.add('gh-inner');
+
 };
