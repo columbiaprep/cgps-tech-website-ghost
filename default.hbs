@@ -91,6 +91,11 @@
      // Add gh-inner class to main
      const main = document.querySelector('main');
      main.classList.add('gh-inner');
+     // Add parent div with class gh-outer
+    const ghOuter = document.createElement('div');
+    ghOuter.classList.add('gh-outer');
+    main.parentNode.insertBefore(ghOuter, main);
+    ghOuter.appendChild(main);
 </script>
 
 <script>
