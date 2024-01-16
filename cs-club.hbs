@@ -1,1 +1,16 @@
 {{!< default}}
+<div class="cs-club-page">
+    <header>
+        <h1>Logo Here</h1>
+    </header>
+    <section id="club-info">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eligendi hic soluta optio odit quibusdam quod temporibus! Ipsum fuga accusantium provident quibusdam exercitationem ab non necessitatibus aperiam adipisci, ut natus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis assumenda tenetur beatae, consequatur voluptatem ratione facere. Quidem repudiandae, magni sed architecto totam labore dolorum, a ullam vel sit ipsum.</p>
+    </section>
+    <section id="club-posts">
+        {{#get "posts" limit="all" filter="tags:[cs-club]" include="tags" order="published_at desc"}}
+                {{#foreach posts}}
+                    {{> "loop"}}
+                {{/foreach}}
+            {{/get}}
+    </section>
+</div>
