@@ -128,6 +128,18 @@
 </script>
 <script src="{{asset "built/main.min.js"}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    // Add gh-inner class to main
+    const coursePostTitles = document.querySelectorAll('.course-post-title');
+    coursePostTitles.forEach(title => {
+        title.classList.add('course-post-title-margin-top');
+    });
+    $('.course-post-title-margin-top').css('margin-top', postTopMarginIntPlusString);
+
+    // Add gh-inner class to main
+    const main = document.querySelector('main');
+    main.classList.add('gh-inner');
+</script>
 
 {{ghost_foot}}
 
