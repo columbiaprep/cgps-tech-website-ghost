@@ -38,7 +38,7 @@ onload = () => {
     const coursesArticles = document.querySelectorAll('.tag-course');
 
     coursesArticles.forEach(article => {
-        const coursesSpans = article.querySelectorAll('span');
+        const coursesSpans = article.querySelectorAll('.post-tag');
 
         coursesSpans.forEach(span => {
             span.classList.add('tag-courses-span')
@@ -69,7 +69,5 @@ onload = () => {
     coursePostTitles.forEach(title => {
         title.classList.add('course-post-title-margin-top');
     });
-    console.log(postTopMarginIntPlusString);
     $('.course-post-title-margin-top').css('margin-top', postTopMarginIntPlusString);
-    
 };
