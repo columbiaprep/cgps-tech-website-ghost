@@ -94,8 +94,5 @@
         "postcss": "8.4.31",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0"
-    },
-    "dependencies": {
-        "jquery": "^3.7.1"
     }
 }

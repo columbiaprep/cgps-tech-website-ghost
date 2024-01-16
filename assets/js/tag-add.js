@@ -1,4 +1,17 @@
 onload = () => {
+    var postTopMarginIntPlusString = "";
+    coursesArticles.forEach(article => {
+        const postTops = article.querySelectorAll('.post-top');
+        postTops.forEach(postTop => {
+            const postTopHeight = postTop.offsetHeight;
+            postTopMarginIntPlusString = "-" + postTopHeight.toString() + "px";
+        });
+    });
+    const coursePostTitles = document.querySelectorAll('.course-post-title');
+    coursePostTitles.forEach(title => {
+        title.classList.add('course-post-title-margin-top');
+    });
+    $('.course-post-title-margin-top').css('margin-top', postTopMarginIntPlusString);
     // Robotics
     const roboticsArticles = document.querySelectorAll('.tag-robotics');
 
@@ -54,13 +67,4 @@ onload = () => {
         });
     });
 
-    // get height of post-top in course articles
-    var postTopMarginIntPlusString = "";
-    coursesArticles.forEach(article => {
-        const postTops = article.querySelectorAll('.post-top');
-        postTops.forEach(postTop => {
-            const postTopHeight = postTop.offsetHeight;
-            postTopMarginIntPlusString = "-" + postTopHeight.toString() + "px";
-        });
-    });
 };
