@@ -22,7 +22,7 @@ onload = () => {
     // Add class to course tag on post page
     const postPageTag = document.querySelector(".gh-article-tag");
     if (postPageTag.textContent == "course") {
-        postPageTag.classList.add("displayNone")
+        postPageTag.classList.add("post-page-course-tag");
     }
     // Robotics
     const roboticsArticles = document.querySelectorAll('.tag-robotics');
