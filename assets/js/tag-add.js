@@ -1,23 +1,29 @@
 onload = () => {
-// Courses
-const coursesArticles = document.querySelectorAll('.tag-course');
+    // Courses
+    const coursesArticles = document.querySelectorAll('.tag-course');
 
-coursesArticles.forEach(article => {
-    const coursesSpans = article.querySelectorAll('.post-tag');
+    coursesArticles.forEach(article => {
+        const coursesSpans = article.querySelectorAll('.post-tag');
 
-    coursesSpans.forEach(span => {
-        span.classList.add('tag-courses-span')
+        coursesSpans.forEach(span => {
+            span.classList.add('tag-courses-span')
+        });
     });
-});
 
-// Course post title class add for margin top subtract
-coursesArticles.forEach(article => {
-    const coursesTitles = article.querySelectorAll('.post-title');
+    // Course post title class add for margin top subtract
+    coursesArticles.forEach(article => {
+        const coursesTitles = article.querySelectorAll('.post-title');
 
-    coursesTitles.forEach(span => {
-        span.classList.add('course-post-title')
+        coursesTitles.forEach(span => {
+            span.classList.add('course-post-title')
+        });
     });
-});
+
+    // Add class to course tag on post page
+    const postPageTag = document.querySelector(".gh-article-tag");
+    if (postPageTag.textContent == "course") {
+        postPageTag.classList.add("displayNone")
+    }
     // Robotics
     const roboticsArticles = document.querySelectorAll('.tag-robotics');
 
