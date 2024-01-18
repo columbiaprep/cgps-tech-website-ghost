@@ -20,8 +20,16 @@ onload = () => {
     });
 
     // Add class to course tag on post page
+    function textEqual(text, element) {
+        if (element) {
+            if (element.textContent == text) {
+                return true
+            }
+        }
+        return false
+    }
     const postPageTag = document.querySelector(".gh-article-tag");
-    if (postPageTag.textContent == "course") {
+    if (textEqual("course", postPageTag)) {
         postPageTag.classList.add("post-page-course-tag");
     }
     // Robotics
