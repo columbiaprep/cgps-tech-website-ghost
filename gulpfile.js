@@ -55,7 +55,8 @@ function js(done) {
             'node_modules/@tryghost/shared-theme-assets/assets/js/v1/main.js',
             'assets/js/lib/*.js',
             'assets/js/main.js',
-            'assets/js/tag-add.js'
+            'assets/js/tag-add.js',
+            'assets/js/course.js'
         ], {sourcemaps: true}),
         concat('main.min.js'),
         uglify(),
