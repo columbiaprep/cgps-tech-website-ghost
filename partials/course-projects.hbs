@@ -1,7 +1,7 @@
 {{!< default}}
-    <div class="course-projects">
+    <div>
         <h2 class="page-title">{{title}} Projects</h2>
-        <div class="courses">
+        <div class="course-projects">
             {{#get "posts" limit="all" filter="tags:[{{slug}}]" include="tags" order="title asc"}}
                 {{#foreach posts}}
                     {{> "loop"}}
