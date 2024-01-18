@@ -1,0 +1,11 @@
+{{!< default}}
+    <div class="course-projects">
+        <h2 class="page-title">{{title}} Projects</h2>
+        <div class="courses">
+            {{#get "posts" limit="all" filter="tags:[{{slug}}]" include="tags" order="title asc"}}
+                {{#foreach posts}}
+                    {{> "loop"}}
+                 {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
