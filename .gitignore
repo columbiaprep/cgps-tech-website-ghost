@@ -22,3 +22,5 @@ assets/css/*
 projectFilesBackup
 
 .DS_Store
+
+dockerfile
