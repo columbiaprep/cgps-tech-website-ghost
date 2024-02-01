@@ -1,0 +1,23 @@
+{{!< default}} 
+<div>
+    <article class="gh-article project-post {{post_class}}">
+        {{#if feature_image}}
+            <figure>
+                <img src="{{feature_image}}">
+                {{#if feature_image_caption}}
+                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+            
+        {{/if}}
+        <div>
+            <header class="gh-article-header gh-canvas">
+                <h1 class="gh-article-title">{{title}} - {{primary_tag.name}}</h1>
+            </header>
+
+            <div class="gh-content gh-canvas">
+                {{content}}
+            </div>
+        </div>
+    </article>
+</div>

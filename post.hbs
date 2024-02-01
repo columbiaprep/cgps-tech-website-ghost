@@ -5,6 +5,8 @@
     {{#post}}
             {{#has tag="#course"}}
                 {{> "course-post"}}
+            {{else has tag="#course-project-post"}}
+                {{> "course-project-post"}}
             {{else}}
                     <article class="gh-article {{post_class}}">
 
