@@ -1,4 +1,5 @@
-{{!< default}} <main>
+{{!< default}} 
+<main>
     <div id="weather-body">
         <div class="row1">
             <div class="current-weather">
@@ -24,8 +25,8 @@
                 <div class="header">
                     <h2>Last 24 Hours</h2>
                 </div>
-                <div class="temp-graph">
-
+                <div class="graph">
+                    <canvas id="chart"></canvas>
                 </div>
             </div>
         </div>
@@ -34,4 +35,6 @@
 
     </div>
     </div>
-    </main>
+</main>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
