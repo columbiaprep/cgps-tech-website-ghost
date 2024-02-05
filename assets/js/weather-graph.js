@@ -31,6 +31,15 @@ makeChart(data);
 
 function makeChart(data) {
     let labels = data.map(d => d['Time (by hour)']);
+    labels = labels.map(d => {
+        let [hour, minute] = d.split(':');
+        if (d === '0:00') {
+            return '12:00 AM';
+        }
+        let ampm = (hour >= 12) ? 'PM' : 'AM';
+        hour = (hour > 12) ? hour - 12 : hour;
+        return `${hour}:${minute} ${ampm}`;
+    });
     let tempData = data.map(d => d['Temp (F)']);
     let windData = data.map(d => d['Avg Wind Speed (mph)']);
 
