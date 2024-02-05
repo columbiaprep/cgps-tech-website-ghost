@@ -1,3 +1,5 @@
+// Sample
+
 var csvData = `Time (by hour),Temp (F),Avg Wind Speed (mph)
 0:00,43,12
 1:00,42,14
