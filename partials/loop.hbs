@@ -34,8 +34,8 @@
                 {{#primary_tag}}
                 <span class="post-tag">{{name}}</span>
                 {{/primary_tag}}
-                <time class="post-date">
-                    {{updated_at}}
+                <time class="post-date" id="post-date-{{id}}">
+                    {{date published_at format="YYYY-MM-DDTHH:mm:ss.SSSZ"}}
                 </time>
             </div>
             
@@ -66,3 +66,23 @@
     </footer>
 </a>
 </article>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var posts = document.querySelectorAll('[id^="post-date-"]');
+        for (var i = 0; i < posts.length; i++) {
+            var dateElement = posts[i];
+            var dateText = dateElement.innerText;
+            var datePost = new Date(dateText);
+            var diff = Date.now() - datePost.getTime();
+            var hours = Math.floor(diff / (1000 * 60 * 60));
+            var minutes = Math.floor(diff / (1000 * 60));
+            if (hours > 24) {
+                dateElement.innerText = datePost.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            } else if (minutes > 60) {
+                dateElement.innerText = hours + (hours === 1 ? ' hr ago' : ' hrs ago');
+            } else {
+                dateElement.innerText = minutes + ' mins ago';
+            }
+        }
+    });
+</script>

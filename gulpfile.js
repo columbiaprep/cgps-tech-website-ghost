@@ -56,7 +56,7 @@ function js(done) {
             'assets/js/lib/*.js',
             'assets/js/main.js',
             'assets/js/tag-add.js',
-            'assets/js/weather-graph.js'
+            'assets/js/weather-graph.js',
         ], {sourcemaps: true}),
         concat('main.min.js'),
         uglify(),
