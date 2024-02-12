@@ -76,11 +76,12 @@
             var diff = Date.now() - datePost.getTime();
             var hours = Math.floor(diff / (1000 * 60 * 60));
             var minutes = Math.floor(diff / (1000 * 60));
+            console.log(minutes)
             if (hours > 24) {
                 dateElement.innerText = datePost.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
             } else if (minutes > 60) {
-                dateElement.innerText = hours + (hours === 1 ? ' hr ago' : ' hrs ago');
-            } else {
+                dateElement.innerText = hours + (hours == 1 ? ' hr ago' : ' hrs ago');
+            } else if (minutes < 61) {
                 dateElement.innerText = minutes + ' mins ago';
             }
         }
