@@ -32,6 +32,12 @@
                                 var minutes = Math.floor(diff / (1000 * 60));
                                 if (hours > 24) {
                                     date.innerHTML = "{{date updated_at format="MMM DD, YYYY"}}";
+                                } else if (hours > 1) {
+                                    date.innerHTML = hours + " hours ago";
+                                } else if (minutes > 1) {
+                                    date.innerHTML = minutes + " minutes ago";
+                                } else {
+                                    date.innerHTML = "Just now";
                                 }
                             </script>
                             <h1 class="gh-article-title">{{title}}</h1>
