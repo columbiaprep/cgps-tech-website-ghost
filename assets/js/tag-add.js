@@ -48,9 +48,10 @@ onload = () => {
 
     csClubArticles.forEach(article => {
         const csClubSpans = article.querySelectorAll('span');
-
         csClubSpans.forEach(span => {
-            span.classList.add('tag-cs-club-span');
+            if (span.textContent!= "Read More") {
+                span.classList.add('tag-cs-club-span');
+            }
         });
     });
     // Girls Who Code
