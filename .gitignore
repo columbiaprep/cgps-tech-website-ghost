@@ -7,7 +7,6 @@ b-cov
 *.pid
 *.gz
 *.zip
-*.css
 
 pids
 logs
