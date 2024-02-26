@@ -3,47 +3,48 @@
 <main class="site-main">
 
     {{#post}}
+            {{#has tag="#course"}}
+                {{> "course-post"}}
+            {{else has tag="#course-project-post"}}
+                {{> "course-project-post"}}
+            {{else}}
+                    <article class="gh-article {{post_class}}">
 
-    <article class="gh-article {{post_class}}">
+                        <header class="gh-article-header gh-canvas">
+                            <span class="gh-article-meta"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
+                                {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
+                                —
+                                <span id="current-post-date">{{updated_at}}</span>
+                            </span>
 
-        <header class="gh-article-header gh-canvas">
-            <span class="gh-article-meta"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
-                {{#primary_author}}By <a href="{{url}}">{{name}}</a>{{/primary_author}}
-                {{#if primary_tag}}
-                    in
-                    <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
-                {{/if}}
-                —
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-            </span>
+                            <script>
+                                // Displays the date in different formats depending on the time passed since the post was published
+                                var date = document.getElementById('current-post-date');
+                                var dateText = date?.innerText;
+                                var dateNow = new Date();
+                                var datePost = dateText ? new Date(dateText) : new Date();
+                                var diff = dateNow.getTime() - datePost.getTime(); 
+                                var hours = Math.floor(diff / (1000 * 60 * 60));
+                                var minutes = Math.floor(diff / (1000 * 60));
+                                if (hours > 24) {
+                                    date.innerHTML = "{{date updated_at format="MMM DD, YYYY"}}";
+                                } else if (hours > 1) {
+                                    date.innerHTML = hours + " hours ago";
+                                } else if (minutes > 1) {
+                                    date.innerHTML = minutes + " minutes ago";
+                                } else {
+                                    date.innerHTML = "Just now";
+                                }
+                            </script>
+                            <h1 class="gh-article-title">{{title}}</h1>
+                        </header>
 
-            <h1 class="gh-article-title">{{title}}</h1>
+                        <div class="gh-content gh-canvas">
+                            {{content}}
+                        </div>
 
-            {{#if custom_excerpt}}
-                <p class="gh-article-excerpt">{{custom_excerpt}}</p>
-            {{/if}}
-
-            {{> "post-image"}}
-        </header>
-
-        <div class="gh-content gh-canvas">
-            {{content}}
-        </div>
-
-    </article>
-
-    {{> "post-navigation"}}
-
-    {{#if comments}}
-        <div class="gh-comments gh-canvas">
-            {{comments}}
-        </div>
-    {{/if}}
-
+                    </article>
+            {{/has}}
     {{/post}}
-
-    {{#if @custom.show_related_posts}}
-        {{> "related-posts"}}
-    {{/if}}
 
 </main>

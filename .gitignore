@@ -7,7 +7,6 @@ b-cov
 *.pid
 *.gz
 *.zip
-*.yaml
 
 pids
 logs
@@ -15,9 +14,13 @@ results
 
 npm-debug.log
 node_modules
+assets/css/*
+assets/test-data
 
 .idea/*
 *.iml
 projectFilesBackup
 
 .DS_Store
+
+dockerfile

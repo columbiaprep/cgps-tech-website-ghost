@@ -1,17 +1,20 @@
-{{!< default}}
-<head>
-    <link rel="stylesheet" type="text/css" href="{{asset "css/robotics-page.css"}}">
-</head>
-<main>
-    <div class="gh-head-logo page-head club-header">
-        <img id="robotics-logo" src="{{asset "images/robotics-club-logo.png"}}" alt="Logo for CGPS Robotics Club">
-        <h2>Robotics Club</h2>
-    </div>
-    <div class="robotics-posts">
-            {{#get "posts" limit="all" filter="tags:[robotics]" include="tags" order="title asc"}}
+{{!< default}} 
+    <main class="robotics-page">
+        <div id="robotics-posts">
+            <div id="page-head">
+                <span class="title">
+                    <img id="robotics-logo" src="{{asset "images/robotics-club-logo.png"}}" alt="Logo for CGPS Robotics Club">
+                    <h2>Robotics</h2>
+                </span>
+            
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sint totam. Sit odit voluptatibus sequi, numquam neque ex esse ipsa cupiditate dolorum, tenetur rem rerum natus veniam recusandae hic. Incidunt.</p>
+                </div>
+            </div>
+            {{#get "posts" limit="all" filter="tags:[robotics]" include="tags" order="published_at desc"}}
                 {{#foreach posts}}
                     {{> "loop"}}
-                 {{/foreach}}
+                {{/foreach}}
             {{/get}}
         </div>
-</main>
+    </main>

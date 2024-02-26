@@ -1,0 +1,40 @@
+{{!< default}} 
+<main>
+    <div id="weather-body">
+        <div class="row1">
+            <div class="current-weather">
+                <div class="header">
+                    <h2>Current Weather</h2>
+                </div>
+                <div class="current-weather-inner">
+                    <div class="left">
+                        <span class="icon">Icon</span>
+                        <span class="wind">
+                            <span class="wind-icon"></span>
+                            <span class="wind-speed"></span>
+                        </span>
+                    </div>
+                    <div class="right">
+                        <span class="today">Monday</span>
+                        <hr>
+                        <span class="temp">32&deg;F / 0&deg;C</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row1-right">
+                <div class="header">
+                    <h2>Last 24 Hours</h2>
+                </div>
+                <div class="graph">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="temp-per-hour">
+
+    </div>
+    </div>
+</main>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

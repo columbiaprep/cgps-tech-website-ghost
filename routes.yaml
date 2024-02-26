@@ -7,6 +7,8 @@ routes:
     template: cs-club
   /robotics/:
     template: robotics-club
+  /weather/:
+    template: weather
 collections:
   /:
     permalink: /{slug}/

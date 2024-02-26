@@ -1,0 +1,23 @@
+{{!< default}}
+<div>
+
+        <article class="gh-article course-article course-post-info {{post_class}}">
+
+            <header class="gh-article-header gh-canvas course-post-header">
+                <h1 class="gh-article-title">{{title}}</h1>
+                <span class="gh-article-meta">
+                    <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+                </span>
+            </header>
+
+            <div class="gh-content gh-canvas course-post-content">
+                {{content}}
+            </div>
+
+        </article>
+
+        <hr>
+
+    {{> "course-projects"}}
+
+</div>
