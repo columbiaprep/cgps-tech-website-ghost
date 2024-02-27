@@ -8,6 +8,12 @@
 4. Rename the folder if you wish
 5. Start developing!
 
+# Configure Routing
+1. Run ghost: ```ghost start```
+2. Navigate to the Ghost Dashboard
+3. Go to settings > labs
+4. Upload the routes.yaml file from this repository
+
 # Development
 
 Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
