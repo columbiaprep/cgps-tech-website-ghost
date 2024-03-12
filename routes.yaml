@@ -1,14 +1,14 @@
 routes:
   /courses/:
-    template: courses
+    template: custom-courses
   /girls-who-code/:
-    template: girls-who-code
+    template: custom-girls-who-code
   /cs-club/:
-    template: cs-club
+    template: custom-cs-club
   /robotics/:
-    template: robotics-club
+    template: custom-robotics-club
   /weather/:
-    template: weather
+    template: custom-weather
 collections:
   /:
     permalink: /{slug}/
