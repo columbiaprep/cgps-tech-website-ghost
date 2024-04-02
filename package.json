@@ -78,7 +78,7 @@
         "dev": "gulp",
         "test": "gscan .",
         "zip": "gulp zip",
-        "start": "ghost start local && gulp"
+        "start": "ghost start"
     },
     "devDependencies": {
         "@tryghost/shared-theme-assets": "2.4.2",
