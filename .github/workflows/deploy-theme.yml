@@ -3,7 +3,7 @@ name: Deploy Theme
 on:
   push:
     branches:
-      - szack
+      - main
 
 jobs:
   deploy:
