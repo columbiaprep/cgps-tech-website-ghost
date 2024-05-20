@@ -45,4 +45,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            pm2 restart ghost
+            ghost restart
+            gulp
