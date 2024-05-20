@@ -1,4 +1,5 @@
 name: Deploy Theme
+
 on:
   push:
     branches:
@@ -8,20 +9,26 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1
         with:
           api-url: ${{ secrets.GHOST_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
-      - name: Setup NodeJS
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with: 
           node-version: '18'
+
       - name: Install Dependencies
         run: npm install
+
       - name: Run Gulp
         run: gulp
+
       - name: Upload Routes YAML
         run: |
           curl -X PUT "${{ secrets.GHOST_API_URL }}/settings/routes/yaml" \
@@ -30,6 +37,7 @@ jobs:
           --data-binary "@/content/themes/cgps-tech-website-ghost/routes.yaml"
         env:
           GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+
       - name: SSH and Restart Ghost
         uses: appleboy/ssh-action@v0.1.5
         with:
@@ -37,6 +45,4 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /ghost-install
-            cp -R /content/themes/cgps-tech-website-ghost
-            ghost restart
+            pm2 restart ghost
