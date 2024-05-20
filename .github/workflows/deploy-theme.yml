@@ -22,6 +22,14 @@ jobs:
         run: npm install
       - name: Run Gulp
         run: gulp
+      - name: Upload Routes YAML
+        run: |
+          curl -X PUT "${{ secrets.GHOST_API_URL }}/settings/routes/yaml" \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Ghost ${GHOST_ADMIN_API_KEY}" \
+          --data-binary "@/content/themes/cgps-tech-website-ghost/routes.yaml"
+        env:
+          GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
       - name: SSH and Restart Ghost
         uses: appleboy/ssh-action@v0.1.5
         with:
