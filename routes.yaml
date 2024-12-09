@@ -1,19 +1,20 @@
 routes:
   /courses/:
-    template: courses
+    template: custom-courses
   /girls-who-code/:
-    template: girls-who-code
-  /cs-club/:
-    template: cs-club
+    template: custom-girls-who-code
+  # /cs-club/:
+  #   template: custom-cs-club
   /robotics/:
-    template: robotics-club
+    template: custom-robotics-club
   /weather/:
-    template: weather
+    template: custom-weather
+  /ghc-gallery/:
+    template: ghc-gallery
 collections:
   /:
     permalink: /{slug}/
     template: index
-
 taxonomies:
   tag: /tag/{slug}/
   author: /author/{slug}/

@@ -1,4 +1,24 @@
-{{!< default}}
-<main>
+{{!< default}} 
+<main class="ghc">
+    <h2 class="ghc-header">Girls Who Code</h2>
+    <div>
+        <iframe src="/ghc-gallery" style="border: none; height: 420px; overflow:hidden"></iframe>
+    </div>
+    <div class="container">
+        <p class="ghc-description">
+        Girls Who Code is open to anyone interested in empowering and supporting female-identified and non-binary people in the field of technology. We aim to close the gender gap and change the image of what a programmer looks like. We share information, work together on community-based projects, and participate in coding competitions. 
+        </p>
+    </div>
     
+    <h3 class="ghc-updates">Updates and Spotlights</h3>
+    <div class="posts-container">
+        {{#get "posts" limit="all" filter="tags:[girls-who-code]" include="tags" order="published_at desc"}}
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -1,6 +1,6 @@
 const {series, parallel, watch, src, dest} = require('gulp');
 const pump = require('pump');
-
+var sass = require('gulp-sass')(require('sass'));
 // gulp plugins and utils
 const livereload = require('gulp-livereload');
 const postcss = require('gulp-postcss');
@@ -37,7 +37,8 @@ function hbs(done) {
 
 function css(done) {
     pump([
-        src('assets/css/screen.css', {sourcemaps: true}),
+        src('assets/css/screen.css', {sourcemaps: true}), 
+        sass().on('error', sass.logError),
         postcss([
             easyimport,
             autoprefixer(),

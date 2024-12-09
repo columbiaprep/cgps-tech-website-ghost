@@ -75,10 +75,10 @@
         }
     },
     "scripts": {
-        "dev": "gulp",
+        "dev": "ghost start && gulp",
         "test": "gscan .",
         "zip": "gulp zip",
-        "start": "ghost start local && gulp"
+        "start": "ghost start"
     },
     "devDependencies": {
         "@tryghost/shared-theme-assets": "2.4.2",
@@ -90,6 +90,7 @@
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.1",
+        "gulp-sass": "^5.1.0",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
         "postcss": "8.4.31",
@@ -97,8 +98,10 @@
         "pump": "3.0.0"
     },
     "dependencies": {
+        "bootstrap": "^5.3.3",
         "chart.js": "^4.4.1",
         "d3": "^7.8.5",
-        "danfojs-node": "^1.1.2"
+        "danfojs-node": "^1.1.2",
+        "sass": "^1.77.1"
     }
 }
